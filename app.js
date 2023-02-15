@@ -5,7 +5,7 @@ const api = " https://restcountries.com/v3.1/all";
 //
 console.log(localStorage.getItem("mode"));
 
-if (JSON.parse(localStorage.getItem("mode")) == true) {
+if (JSON.parse(localStorage.getItem("mode"))) {
   document.body.classList.add("dark-mode");
 }
 const request = new XMLHttpRequest();
@@ -52,5 +52,4 @@ toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   console.log(document.body.classList.contains("dark-mode"));
   localStorage.setItem("mode", document.body.classList.contains("dark-mode"));
-  //   console.log();
 });
